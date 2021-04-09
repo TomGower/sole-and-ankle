@@ -30,6 +30,7 @@ const ShoeCard = ({
     : isNewShoe(releaseDate)
       ? 'new-release'
       : 'default'
+    console.log(variant);
 
   return (
     <Link href={`/shoe/${slug}`}>
@@ -37,13 +38,16 @@ const ShoeCard = ({
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
         </ImageWrapper>
+        {variant === 'on-sale' && <Tag style={{ '--color': COLORS.secondary }}>Sale</Tag>}
+        {variant === 'new-release' && <Tag style={{ '--color': COLORS.primary }}>Just Released!</Tag>}
         <Spacer size={12} />
         <Row>
           <Name>{name}</Name>
-          <Price>{formatPrice(price)}</Price>
+          <Price onSale={salePrice}>{formatPrice(price)}</Price>
         </Row>
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
+          {salePrice && <SalePrice>{formatPrice(salePrice)}</SalePrice>}
         </Row>
       </Wrapper>
     </Link>
@@ -54,6 +58,7 @@ const Link = styled.a`
   text-decoration: none;
   color: inherit;
   flex: 1;
+  position: relative;
 `;
 
 const Wrapper = styled.article`
@@ -82,7 +87,9 @@ const Name = styled.h3`
   color: ${COLORS.gray[900]};
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+  text-decoration-line: ${p => p.onSale ? 'line-through': 'none'}
+`;
 
 const ColorInfo = styled.p`
   color: ${COLORS.gray[700]};
@@ -91,6 +98,15 @@ const ColorInfo = styled.p`
 const SalePrice = styled.span`
   font-weight: ${WEIGHTS.medium};
   color: ${COLORS.primary};
+`;
+
+const Tag = styled.label`
+  position: absolute;
+  background-color: var(--color);
+  color: ${COLORS.white};
+  top: 12px;
+  right: -4px;
+  padding: 8px;
 `;
 
 export default ShoeCard;
