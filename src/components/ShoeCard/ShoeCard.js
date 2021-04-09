@@ -72,6 +72,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
+  border-radius: 16px 16px 4px 4px;
   height: 100%;
   width: 100%;
 `;
@@ -88,7 +89,7 @@ const Name = styled.h3`
 `;
 
 const Price = styled.span`
-  text-decoration-line: ${p => p.onSale ? 'line-through': 'none'}
+  text-decoration-line: ${p => p.onSale ? 'line-through': 'none'};
 `;
 
 const ColorInfo = styled.p`
@@ -107,6 +108,7 @@ const Tag = styled.label`
   top: 12px;
   right: -4px;
   padding: 8px;
+  border-radius: 2px;
 `;
 
 export default ShoeCard;

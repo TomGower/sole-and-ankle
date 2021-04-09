@@ -17,7 +17,7 @@ const Header = () => {
         </LogoWrapper>
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
+          <NavLink href="/new" style={{ color: COLORS.gray[700] }}>New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
