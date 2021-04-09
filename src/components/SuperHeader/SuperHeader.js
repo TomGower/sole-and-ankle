@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   background-color: ${COLORS.gray[900]};
   display: flex;
   justify-content: space-between;
-  padding: 0 32px;
+  padding: 6px 32px;
 `;
 
 const MarketingMessage = styled.span`
