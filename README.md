@@ -4,14 +4,14 @@ In this workshop, our goal is to finish building an e-commerce store!
 
 The good news is, most of our work is done already. We just need to write some additional CSS to construct the layout; things are a bit messy right now!
 
-- Access the Figma: https://www.figma.com/file/kAL3AumTUV11y1IqHhltB6/Sole-and-Ankle-%E2%80%94-Mockup
+- Access the Figma: <https://www.figma.com/file/kAL3AumTUV11y1IqHhltB6/Sole-and-Ankle-%E2%80%94-Mockup>
 
 This project uses Create React App. To get started, run the following terminal commands:
 
 - `npm install`
 - `npm run start`
 
-You can then visit the app in-browser; it defaults to http://localhost:3000.
+You can then visit the app in-browser; it defaults to <http://localhost:3000>.
 
 _Note that we're only focusing on the design._ The links and inputs don't do anything.
 
@@ -75,7 +75,7 @@ _NOTE:_ This exercise has minimal flexbox implications, and is mainly about revi
 
 ![Screenshot of the store, with the final details added](./docs/exercise-4b-solution.png)
 
-## To be continued!
+## To be continued
 
 Our sneaker store can flex to support different screen sizes, but there isn't a proper mobile or tablet view. Don't fret — we will revisit this workshop in a future module!
 
